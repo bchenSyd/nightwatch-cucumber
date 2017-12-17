@@ -1,6 +1,7 @@
-const seleniumServer = require('selenium-server')
-const phantomjs = require('phantomjs-prebuilt')
-const chromedriver = require('chromedriver')
+const seleniumServer = require('selenium-server');
+const phantomjs = require('phantomjs-prebuilt');
+const chromedriver = require('chromedriver');
+const geckodriver = require('geckodriver');
 
 require('nightwatch-cucumber')({
   cucumberArgs: ['--compiler', 'js:babel-core/register', '--require', 'features/step_definitions', '--format', 'json:reports/cucumber.json', 'features']
@@ -12,7 +13,7 @@ module.exports = {
   live_output: false,
   disable_colors: false,
   selenium: {
-    start_process: true ,
+    start_process: true,
     server_path: seleniumServer.path,
     log_path: '',
     host: '127.0.0.1',
@@ -20,7 +21,7 @@ module.exports = {
   },
   test_settings: {
     default: {
-      launch_url: 'http://localhost:8087',
+      launch_url: 'http://localhost:8080',
       selenium_port: 4444,
       selenium_host: '127.0.0.1',
       desiredCapabilities: {
@@ -33,12 +34,15 @@ module.exports = {
     chrome: {
       desiredCapabilities: {
         browserName: 'chrome',
+        chromeOptions: {
+          args: ['--start-maximized'],
+        },
         javascriptEnabled: true,
         acceptSslCerts: true
       },
       selenium: {
         cli_args: {
-          'webdriver.chrome.driver': chromedriver.path
+          'webdriver.chrome.driver': chromedriver.path,
         }
       }
     },
@@ -46,7 +50,12 @@ module.exports = {
       desiredCapabilities: {
         browserName: 'firefox',
         javascriptEnabled: true,
-        acceptSslCerts: true
+        marionette: true
+      },
+      selenium: {
+        cli_args: {
+          'webdriver.gecko.driver': geckodriver.path
+        }
       }
     }
   }

@@ -2,19 +2,25 @@
   "name": "babel-example",
   "version": "1.0.0",
   "scripts": {
-    "test": "nightwatch"
+    "cucumber": "nightwatch -c nightwatch.cucumber.conf.js",
+    "cucumber:chrome": "nightwatch -c nightwatch.cucumber.conf.js -e chrome",
+    "cucumber:ff": "nightwatch -c nightwatch.cucumber.conf.js -e firefox",
+    "e2e": "nightwatch -c nightwatch.e2e.conf.js",
+    "e2e:chrome": "nightwatch -c nightwatch.e2e.conf.js -e chrome",
+    "e2e:ff": "nightwatch -c nightwatch.e2e.conf.js -e firefox"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",
     "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "chromedriver": "^2.33.2",
     "cucumber": "^3.1.0",
+    "geckodriver": "^1.10.0",
     "nightwatch": "^0.9.16",
     "nightwatch-cucumber": "^8.2.8",
     "phantomjs-prebuilt": "^2.1.15",
-    "selenium-server": "^3.6.0"
+    "selenium-server": "<=3.7.1"
   }
 }
