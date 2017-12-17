@@ -3,6 +3,7 @@ const phantomjs = require('phantomjs-prebuilt');
 const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
 
+// http://nightwatchjs.org/gettingstarted#basic-settings
 module.exports = {
     src_folders: ['e2e'],
     output_folder: 'reports',
