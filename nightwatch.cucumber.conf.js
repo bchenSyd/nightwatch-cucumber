@@ -7,7 +7,7 @@ require('nightwatch-cucumber')({
   cucumberArgs: ['--compiler', 'js:babel-core/register', 
   '--require', 'features/step_definitions', 
   '--format', 'json:reports/cucumber.json', 
-  'features/google-search.feature']
+  'features']
 })
 
 module.exports = {
