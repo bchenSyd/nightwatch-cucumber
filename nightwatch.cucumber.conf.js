@@ -4,7 +4,10 @@ const chromedriver = require('chromedriver');
 const geckodriver = require('geckodriver');
 
 require('nightwatch-cucumber')({
-  cucumberArgs: ['--compiler', 'js:babel-core/register', '--require', 'features/step_definitions', '--format', 'json:reports/cucumber.json', 'features']
+  cucumberArgs: ['--compiler', 'js:babel-core/register', 
+  '--require', 'features/step_definitions', 
+  '--format', 'json:reports/cucumber.json', 
+  'features']
 })
 
 module.exports = {

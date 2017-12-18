@@ -1,3 +1,25 @@
+```javascript
+    {
+        "plugins": [
+            "babel-plugin-transform-async-to-generator",
+            "babel-plugin-transform-es2015-modules-commonjs"
+        ]
+    }
+
+
+    equivalent
+
+    {
+        "presets": [ "env" ],
+        "plugins": [
+            "transform-runtime",
+            "transform-async-to-generator"
+        ]
+    }
+
+```
+
+
 ## selenium-server@3.8.1 doesn't work with phantomjs
     "selenium-server": "<=3.7.1"
 
