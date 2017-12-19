@@ -1,0 +1,61 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "React",
+    "line": 1,
+    "id": "react",
+    "tags": [],
+    "uri": "features/localhost.feature",
+    "elements": [
+      {
+        "id": "react;localhost",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "localhost",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I open sub page \"/components.html#accordion\"",
+            "match": {
+              "location": "features/step_definitions/steps.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62706
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I expect that element \"[data-reactroot]\" to be present",
+            "match": {
+              "location": "features/step_definitions/steps.js:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I expect that element \".Accordions__header-left\" text should be \"Terms & conditions\"",
+            "match": {
+              "location": "features/step_definitions/steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
