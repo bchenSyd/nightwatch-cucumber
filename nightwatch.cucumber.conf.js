@@ -7,7 +7,7 @@ require('nightwatch-cucumber')({
   cucumberArgs: ['--compiler', 'js:babel-core/register', 
   '--require', 'features/step_definitions', 
   '--format', 'json:reports/cucumber.json', 
-  'features/nightwatchjs.feature']
+  'features']
 })
 
 module.exports = {
@@ -24,7 +24,7 @@ module.exports = {
   },
   test_settings: {
     default: {
-      launch_url: 'http://localhost:8080',
+      launch_url: 'http://localhost:3000',
       selenium_port: 4444,
       selenium_host: '127.0.0.1',
       desiredCapabilities: {

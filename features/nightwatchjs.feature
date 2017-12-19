@@ -1,8 +1,8 @@
-Feature: Google Search
+Feature: Nightwatch
 
-Scenario: Searching Google
+Scenario: Nightwatch Home
 
-  Given I open nightwatchjs home page
+  Given I open page "http://nightwatchjs.org"
   Then I expect that element ".container.download" to be present
-  And I expect that element ".version" text should be "(0.9.1)"
+  And I expect that element ".version" text should be "(v0.9.19)"
 
