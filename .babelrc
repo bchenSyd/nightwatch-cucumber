@@ -3,7 +3,9 @@
         "env"
     ],
   "plugins": [
+    // NOTE: transform-runtime is not part of preset-stage0
     "transform-runtime",
+    // transform-async-to-generator is part of preset-stage0
     "transform-async-to-generator"
   ]
 }
