@@ -25,20 +25,33 @@
             },
             "result": {
               "status": "passed",
-              "duration": 21974
+              "duration": 24944
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "I expect that element \".version\" text should be \"(0.9.1)\"",
+            "name": "I expect that element \".container.download\" to be present",
             "match": {
-              "location": "features/step_definitions/steps.js:12"
+              "location": "features/step_definitions/steps.js:11"
             },
             "result": {
               "status": "passed",
-              "duration": 3244
+              "duration": 51
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I expect that element \".version\" text should be \"(0.9.1)\"",
+            "match": {
+              "location": "features/step_definitions/steps.js:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3775
             }
           }
         ]

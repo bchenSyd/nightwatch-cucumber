@@ -8,9 +8,11 @@ defineSupportCode(({ Given, Then, When }) => {
     await client.waitForElementVisible('body', 1000)
   })
 
+  Then(/^I expect that element "([^"]*)" to be present$/, async (selector)=>{
+    await client.waitForElementPresent(selector,6000);
+  });
 
   Then(/^I expect that element "([^"]*)" text should be "([^"]*)"$/, async (selector, expectedText) => {
-
 
     debugger;
     await client.expect.element('.version').text.to.equal('(v0.9.19)');
@@ -32,8 +34,6 @@ defineSupportCode(({ Given, Then, When }) => {
        client.assert.equal(0, result.status);
        client.click('.version');
     });
-
-
 
   })
 
