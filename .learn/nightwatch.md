@@ -28,4 +28,31 @@ TextAssertion.prototype.executeCommand = function(callback) {
   this.protocol.elementIdText(this.elementResult.ELEMENT, callback);
 };
 
+
+
+// test_settings is NightWatch options;
+// node_modeuls/nightwatch/lib/runner/cli/clirunner.js  line#428
+ switch (testRunnerType) {
+      case 'default':
+        var runner = new Runner(source, this.test_settings, {
+          output_folder : this.output_folder,
+
+
+          ...
+
+      case 'mocha':
+      break;
+        }
+// default test Runner (not mocha)
+// node_moduels/nightwatch/lib/runner/run.js
+function Runner(testSource, opts, additionalOpts, doneCb) {
+  this.testSource = testSource || [];
+  this.options = opts;
+  this.additionalOpts = additionalOpts;
+  this.doneCb = doneCb || function() {};
+  this.globalStartTime = new Date().getTime();
+  this.currentTestSuite = null;
+
+  this.setOptions();
+}
 ```

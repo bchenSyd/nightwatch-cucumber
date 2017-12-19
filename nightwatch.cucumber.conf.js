@@ -22,7 +22,7 @@ module.exports = {
     host: '127.0.0.1',
     port: 4444
   },
-  test_settings: {
+  test_settings: { // test_settings is nightwatch options;
     default: {
       launch_url: 'http://localhost:3000',
       selenium_port: 4444,
@@ -35,10 +35,16 @@ module.exports = {
       }
     },
     chrome: {
+      globals:{
+        waitForConditionTimeout: 1000 // global waitforelementpresent timeout;
+      },
       desiredCapabilities: {
         browserName: 'chrome',
         chromeOptions: {
           args: ['--start-maximized'],
+          prefs: {
+            'profile.managed_default_content_settings.images': 2
+          }
         },
         javascriptEnabled: true,
         acceptSslCerts: true
