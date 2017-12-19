@@ -7,7 +7,8 @@
     "cucumber:ff": "nightwatch -c nightwatch.cucumber.conf.js -e firefox",
     "e2e": "nightwatch -c nightwatch.e2e.conf.js",
     "e2e:chrome": "nightwatch -c nightwatch.e2e.conf.js -e chrome",
-    "e2e:ff": "nightwatch -c nightwatch.e2e.conf.js -e firefox"
+    "e2e:ff": "nightwatch -c nightwatch.e2e.conf.js -e firefox", 
+    "debug":"node --inspect-brk node_modules/nightwatch/bin/runner.js -c nightwatch.cucumber.conf.js"
   },
   "keywords": [],
   "author": "",

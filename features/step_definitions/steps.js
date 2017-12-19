@@ -11,6 +11,10 @@ defineSupportCode(({ Given, Then, When }) => {
 
   Then(/^I expect that element "([^"]*)" text should be "([^"]*)"$/, async (selector, expectedText) => {
 
+
+    debugger;
+    await client.expect.element('.version').text.to.equal('(v0.9.19)');
+    
     // ********************************************************
     //   undefined; because nightwatch-cucumber is not using 
     //   promise internally; can only use callback pattern
@@ -28,6 +32,9 @@ defineSupportCode(({ Given, Then, When }) => {
        client.assert.equal(0, result.status);
        client.click('.version');
     });
+
+
+
   })
 
   
