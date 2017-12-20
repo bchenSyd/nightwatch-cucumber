@@ -31,7 +31,8 @@ module.exports = {
         browserName: 'phantomjs',
         javascriptEnabled: true,
         acceptSslCerts: true,
-        'phantomjs.binary.path': phantomjs.path
+        'phantomjs.binary.path': phantomjs.path,
+        "phantomjs.cli.args" : ['--ignore-ssl-errors=true', '--load-images=false']
       }
     },
     chrome: {
